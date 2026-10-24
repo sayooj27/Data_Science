@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+
+with open("3_data.txt") as f:
+    data = f.read()
+
+data = data.split("\n")
+
+x = [int(row.split()[0]) for row in data if row.strip()]
+y = [int(row.split()[1]) for row in data if row.strip()]
+
+plt.plot(x, y)
+plt.xlabel("x axis")
+plt.ylabel("y axis")
+plt.title("pgm25")
+plt.savefig("pgm25.png")
